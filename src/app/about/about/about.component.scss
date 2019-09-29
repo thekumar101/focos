@@ -1,0 +1,44 @@
+.card-link {
+    padding: 15px;
+    color: #94c13d;
+    cursor: pointer;
+    .fa {
+        margin-bottom: 15px;
+    }
+    // p {
+    //     margin: 0;
+    //     color: #fff;
+    //     background: #94c13d;
+    // }
+}
+.card-link:hover {
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 152, 0, 0.4);
+}
+
+.compressed {
+    max-width: 760px;
+}
+
+@media (min-width: 1215px) {
+    .card-link {
+        min-height: 119px;
+    }
+}
+
+@media (min-width: 877px) and (max-width: 1214px) {
+    .card-link {
+        min-height: 143px;
+    }
+}
+
+@media (min-width: 877px) and (max-width: 876px) {
+    .card-link {
+        min-height: 143px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 876px) {
+    .card-link {
+        min-height: 167px;
+    }
+}

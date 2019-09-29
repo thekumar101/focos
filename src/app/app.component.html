@@ -1,0 +1,51 @@
+<button type="submit" class="btn btn-default hero-button-flat pos-top d-block d-sm-block d-md-none" (click)="donateNow()">Donate Now</button>
+<div class="container-fluid wrapper remove-padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-3 col-md-3 col-sm-6 d-none d-sm-none d-md-block" *ngFor="let menuItem of menuItems">
+        <div class="card card-stats" (click)="selectView(menuItem)">
+          <div class="card-header card-header-warning card-header-icon">
+            <div class="card-icon" [class.active]="menuItem.active">
+              <img *ngIf="menuItem.icon === 'focos'" class="focos-logo" src="../assets/img/focos_logo.png" alt="">
+              <!-- <i class="focos-logo" *ngIf="menuItem.icon === 'focos'"></i> -->
+              <i class="fa fa-home" *ngIf="menuItem.icon === 'mat_assignment'"></i>
+              <i class="fa fa-group" *ngIf="menuItem.icon === 'mat_people'"></i>
+              <i class="fa fa-usd" *ngIf="menuItem.icon === 'donate'"></i>
+              <i class="fa fa-address-card" *ngIf="menuItem.icon === 'address-card'"></i>
+            </div>
+            <p class="card-category title-position">{{ menuItem.title }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-3 col-sm-6 d-block d-sm-block d-md-none">
+        <carousel (activeSlideChange)="slide($event)" [(activeSlide)]="activeSlideIndex">
+          <slide *ngFor="let menuItem of menuItems">
+              <div class="card card-stats" (click)="selectView(menuItem)">
+                <div class="card-header card-header-warning card-header-icon">
+                  <div class="card-icon" [class.active]="menuItem.active">
+                    <img *ngIf="menuItem.icon === 'focos'" class="focos-logo" src="../assets/img/focos_logo.png" alt="">
+                    <i class="fa fa-home" *ngIf="menuItem.icon === 'mat_assignment'"></i>
+                    <i class="fa fa-group" *ngIf="menuItem.icon === 'mat_people'"></i>
+                    <i class="fa fa-usd" *ngIf="menuItem.icon === 'donate'"></i>
+                    <i class="fa fa-address-card" *ngIf="menuItem.icon === 'address-card'"></i>
+                  </div>
+                  <p class="card-category title-position">{{ menuItem.title }}</p>
+                </div>
+              </div>
+          </slide>
+        </carousel>
+      </div>
+      <a class="text-light dropdown d-block d-sm-block d-md-none responsive-ellipsis" href="javascript:void(0)"
+        id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fa fa-2x fa-ellipsis-h" aria-hidden="true"></i>
+        <div class="ripple-container"></div>
+        <div class="ripple-container"></div>
+      </a>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+        <a class="dropdown-item" href="javascript:void(0)" *ngFor="let menuItem of menuItems"
+          (click)="selectView(menuItem)">{{ menuItem?.title }}</a>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

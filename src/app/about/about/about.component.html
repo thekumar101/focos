@@ -1,0 +1,31 @@
+<div class="card-header card-header-tabs card-header-info tab-header">
+    <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+            <strong *ngIf="!selectedView" class="nav-tabs-title">FOCOS</strong>
+            <strong class="nav-tabs-title" *ngIf="selectedView && selectedView.text">{{ selectedView.text }}</strong>
+            <span class="active subscript clickable pull-right" *ngIf="selectedView" (click)="selectedView = null">Back</span>
+            <i class="fa fa-circle-o-notch fa-spin fa-fw" *ngIf="loading"></i>
+        </div>
+    </div>
+</div>
+<div class="card-body remove-padding">
+    <div class="tab-content">
+        <div class="tab-pane active" id="profile">
+            <div class="container-fluid">
+                <div class="row" *ngIf="!selectedView">
+                    <div class="col-sm-3" *ngFor="let menuItem of menuItems">
+                        <div class="card text-center card-link" (click)="viewSelected(menuItem)">
+                            <i [class]="menuItem.icon" aria-hidden="true"></i>
+                            <p>{{ menuItem.text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- <app-external-url-viewer [externalAppUrl]="aboutFocosUrl" *ngIf="selectedView"></app-external-url-viewer> -->
+            <div class="iframe-container" *ngIf="selectedView">
+                <iframe [src]="appUrl" width="100%" height="500px" type='application/pdf'></iframe>
+            </div>
+        </div>
+    </div>
+</div>

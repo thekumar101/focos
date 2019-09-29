@@ -1,0 +1,41 @@
+<div class="card-header card-header-tabs card-header-info tab-header">
+    <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper" style="padding-right: 0;">
+            <strong class="nav-tabs-title" *ngIf="!externalAppUrl">2019 FOCOS LA – EVENING OF HOPE</strong>
+            <span class="active subscript" *ngIf="!externalAppUrl">Sunday, October 27, 2019 5:00 PM 9:00 PM</span>
+            <strong class="nav-tabs-title" *ngIf="externalAppUrl">{{ externalAppTitle }}</strong>
+            <span class="active subscript clickable pull-right" *ngIf="externalAppUrl"
+                (click)="externalAppUrl = null">Back</span>
+            <i class="fa fa-circle-o-notch fa-spin fa-fw" *ngIf="loading"></i>
+        </div>
+    </div>
+</div>
+<div class="card-body" style="padding-top: 0" [class.remove-padding]="externalAppUrl">
+    <div class="tab-content">
+        <div class="row" *ngIf="!externalAppUrl">
+            <div class="col-sm-8">
+                <img src="../assets/img/evening-of-hope.jpg" alt="" class="responsive-image">
+                <button type="submit" class="btn btn-primary hero-button-success m-r-10 d-block d-sm-none"
+                    (click)="viewInternalLink('TICKET')"><i class="fa fa-ticket" aria-hidden="true"></i> Event
+                    Tickets</button>
+                <button type="submit" class="btn btn-primary hero-button d-block d-sm-none"
+                    (click)="viewInternalLink('EVENTS')">View Upcoming Events</button>
+            </div>
+            <div class="col-sm-4">
+                <iframe style="max-width: 100%;" height="300" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=12345%20Ventura%20Blvd%20Studio%20City%20CA%20LA&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    class="m-b-10" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                <button type="submit" class="btn btn-primary hero-button-success m-r-10 d-none d-sm-block"
+                    (click)="viewInternalLink('TICKET')"><i class="fa fa-ticket" aria-hidden="true"></i> Event
+                    Tickets</button>
+                <button type="submit" class="btn btn-primary hero-button d-none d-sm-block"
+                    (click)="viewInternalLink('EVENTS')">View Upcoming Events</button>
+            </div>
+        </div>
+        <div class="tab-pane active" id="profile" *ngIf="externalAppUrl">
+            <div class="iframe-container">
+                <iframe [src]="appUrl" width="100%" height="500px" type='application/pdf'></iframe>
+            </div>
+        </div>
+    </div>
+</div>

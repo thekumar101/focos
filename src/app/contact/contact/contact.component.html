@@ -1,0 +1,17 @@
+<div class="card-header card-header-tabs card-header-info tab-header">
+    <div class="nav-tabs-navigation">
+        <div class="nav-tabs-wrapper">
+            <strong class="nav-tabs-title">Contact Us</strong>
+            <i class="fa fa-circle-o-notch fa-spin fa-fw pull-right" *ngIf="loading"></i>
+        </div>
+    </div>
+</div>
+<div class="card-body remove-padding">
+    <div class="tab-content">
+        <div class="tab-pane active" id="profile">
+            <div class="iframe-container" *ngIf="selectedView">
+                <iframe [src]="appUrl" width="100%" height="500px" type='application/pdf'></iframe>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.nav-tabs {
+    display: inline-block !important;
+    margin-left: 14px;
+    color: #fff;
+}
+
+.tab-header {
+    border-bottom: 0;
+    background: #94c13d;
+    border-radius: 3px;
+    margin: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    padding-top: 7px !important;
+    padding-bottom: 7px !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    color: #fff;
+    box-shadow: 0 4px 20px 0px rgba(253, 233, 233, 0.14), 0 7px 10px -5px #abb598;
+}
+
+.subscript {
+    line-height: 24px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.remove-padding {
+    padding: 0;
+}
+
+.iframe-container iframe {
+    min-height: 400px;
+    height: -moz-calc(100vh - 218px);
+    height: -webkit-calc(100vh - 218px);
+    height: -o-calc(100vh - 218px);
+    height: calc(100vh - 218px);
+    box-shadow: none !important;
+    border-radius: 3px;
+    border: none;
+}
+
+.fa-spin {
+    margin-top: 4px !important;
+    margin-left: 7px !important;
+}
+
+.card-link {
+    min-height: 119px;
+    margin-bottom: 15px;
+    p {
+        margin: 0;
+        color: #969a8e;
+    }
+}
+
+.card-header {
+    padding-right: 0 !important;
+}
+
+.nav-tabs-wrapper {
+    padding-right: 10px;
+}
+.carousel-control-next {
+    right: -15px;
+}
+.carousel-control-prev {
+    left: -15px;
+}
+.carousel-control-next, .carousel-control-prev {
+    transition: none;
+    margin-top: 23px;
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23888' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23888' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
+.tab-header {
+    margin-top: 12px !important;
+}
+
+.carousel-indicators {
+    margin-right: 15%;
+    margin-left: 42%;
+    li {
+        background-color: #c7d7a7;
+    }
+}

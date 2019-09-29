@@ -1,0 +1,125 @@
+.wrapper {
+    margin-top: 13px;
+}
+
+.card-header-primary .card-icon, .card-header-warning .card-icon, .card-header-success .card-icon,
+.card-header-info .card-icon {
+    background: #fff !important;
+    color: #94c13d !important;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.card [class*=card-header-] .card-icon, .card [class*=card-header-] .card-text {
+    padding: 4px !important;
+    margin-right: 17px !important;
+    border-radius: 10px;
+}
+
+.card-header-primary .active, .card-header-warning .active, .card-header-success .active,
+.card-header-info .active {
+    background: #94c13d !important;
+    color: #fff !important;
+}
+
+.card [class*=card-header-]:not(.card-header-icon):not(.card-header-text):not(.card-header-image) {
+    border-radius: 3px;
+}
+
+.card-stats .card-header.card-header-icon, .card-stats .card-header.card-header-text {
+    min-height: 80px;
+}
+
+.card-stats {
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+.focos-logo {
+    background-image: url('../assets/img/focos_logo.png');
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background-repeat: no-repeat;
+}
+@media (max-width: 576px) {
+    .responsive-ellipsis {
+        margin: 0 auto;
+        margin-top: -7px;
+        margin-bottom: 0;
+        height: 16px;
+        position: absolute;
+        right: 18px;
+    }
+}
+
+@media (min-width: 576px) {
+    .responsive-ellipsis {
+        margin-top: 0px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .card-stats .card-header.card-header-icon, .card-stats .card-header.card-header-text {
+        min-height: 90px;
+    }
+    .title-position {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+}
+
+
+.card-stats .card-header.card-header-icon i {
+    font-size: 36px;
+    line-height: 56px;
+    width: 56px;
+    height: 56px;
+    text-align: center;
+}
+
+.card-icon {
+    margin-top: -40px;
+    float: left;
+    box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgb(171, 181, 152)
+}
+
+.card {
+    border: 1px solid rgb(148, 193, 61);
+}
+
+.card-category {
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 9px;
+    color: #8f9288;
+}
+@media (min-width: 252px) and (max-width: 767px) {
+    .card-category {
+        color: #8f9288 !important;
+        text-shadow: 1px 1px 2px #ffffff !important;
+    }
+}
+
+.text-light {
+    color: #acafa2 !important;
+}
+
+.hero-button-flat {
+    background: #fff;
+    color: #94c13d;
+    border: 1px solid;
+    border-bottom: 0;
+    border-radius: 0;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+
+.pos-top {
+    position: absolute;
+    left: 167px;
+    top: 13px;
+    height: 30px;
+    z-index: 9;
+}
