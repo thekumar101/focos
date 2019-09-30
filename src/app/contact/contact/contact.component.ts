@@ -20,6 +20,7 @@ export class ContactComponent implements OnInit {
   }
 
   sanitizeUrl(url) {
+    document.location.href = url;
     this.externalAppUrl = url;
     this.appUrl = this.domSanitizer.bypassSecurityTrustResourceUrl(this.externalAppUrl);
   }

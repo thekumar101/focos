@@ -10,9 +10,9 @@ export class DonateComponent implements OnDestroy, OnInit {
   donateUrl = 'https://focoshospital.org/donate-now/';
   loading = false;
   menuItems = [
-    { icon: 'fa fa-3x fa-credit-card', text: 'GENERAL DONATION', internal: true, url: 'http://weblink.donorperfect.com/focos_donation' },
-    { icon: 'fa fa-3x fa-folder-o', text: 'ENDOWMENT FUND', internal: true, url: 'http://weblink.donorperfect.com/focos_donation' },
-    { icon: 'fa fa-3x fa-ticket', text: 'EVENING OF HOPE TICKETS', internal: true, url: 'http://weblink.donorperfect.com/evening_of_hope' }
+    { icon: 'fa fa-3x fa-credit-card', text: 'GENERAL DONATION', internal: false, url: 'http://weblink.donorperfect.com/focos_donation' },
+    { icon: 'fa fa-3x fa-folder-o', text: 'ENDOWMENT FUND', internal: false, url: 'http://weblink.donorperfect.com/focos_donation' },
+    { icon: 'fa fa-3x fa-ticket', text: 'EVENING OF HOPE TICKETS', internal: false, url: 'http://weblink.donorperfect.com/evening_of_hope' }
   ];
   selectedView = null;
   appUrl: any;
