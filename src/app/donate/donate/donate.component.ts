@@ -11,7 +11,7 @@ export class DonateComponent implements OnDestroy, OnInit {
   loading = false;
   menuItems = [
     { icon: 'fa fa-3x fa-credit-card', text: 'GENERAL DONATION', internal: false, url: 'http://weblink.donorperfect.com/focos_donation' },
-    { icon: 'fa fa-3x fa-folder-o', text: 'ENDOWMENT FUND', internal: false, url: 'http://weblink.donorperfect.com/focos_donation' },
+    { icon: 'fa fa-3x fa-folder-o', text: 'ENDOWMENT FUND', internal: false, url: 'http://weblink.donorperfect.com/focos_endowment' },
     { icon: 'fa fa-3x fa-ticket', text: 'EVENING OF HOPE TICKETS', internal: false, url: 'http://weblink.donorperfect.com/evening_of_hope' }
   ];
   selectedView = null;
@@ -43,7 +43,8 @@ export class DonateComponent implements OnDestroy, OnInit {
     if (menuItem.internal) {
       this.viewInternalLink(menuItem);
     } else {
-      document.location.href = menuItem.url;
+      // document.location.href = menuItem.url;
+      window.open(menuItem.url);
     }
   }
 

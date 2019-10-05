@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class HomeComponent implements OnInit {
   eventsHubUrl = 'https://focos.focoshospital.org/events-hub/';
-  eventsTicketUrl = 'https://focos.focoshospital.org/evening-of-hope-tickets/';
+  eventsTicketUrl = 'http://weblink.donorperfect.com/evening_of_hope';
   externalAppUrl: any;
   externalAppTitle: string = 'Upcoming Events';
   appUrl: any;
@@ -31,13 +31,17 @@ export class HomeComponent implements OnInit {
   }
 
   viewInternalLink(urlType) {
-    this.loading = true;
     const appUrl = urlType && urlType === 'TICKET' ? this.eventsTicketUrl : this.eventsHubUrl;
     this.externalAppTitle = urlType && urlType === 'TICKET' ? 'Evening of Hope - Tickets' : 'Upcoming Events';
-    this.sanitizeUrl(appUrl);
-    setTimeout(() => {
-      this.loading = false;
-    }, 4000);
+    if (urlType && urlType === 'TICKET') {
+      window.open(appUrl);
+    } else {
+      this.loading = true;
+      this.sanitizeUrl(appUrl);
+      setTimeout(() => {
+        this.loading = false;
+      }, 4000);
+    }
   }
 
 }
